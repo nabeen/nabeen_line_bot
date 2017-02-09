@@ -25,7 +25,7 @@ $replyMessage = null;
 if ($event->message->type == "text") {
     //とりあえず今回は少し加工するだけ
     $replyMessage = "( ﾟ∀ﾟ)o彡°おっぱい！おっぱい！";
-    $command = $argv[1];
+    $command = $event->message->text;
     exec($command, $responce);
     $replyMessage implode($responce, PHP_EOL);
 } else {
